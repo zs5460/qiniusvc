@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Qiniu CDN Monitor</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="Icon-60@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="Icon-60@3x.png" />
+<style type="text/css">
+html,body{margin:0;padding:0;background-color:#000;height:98%;}
+#container{height:100%;}
+</style>
+</head>
+<body>
+<div id="container"></div>
+<script src="http://img.redimg.cn/js/jquery/latest.js"></script>
+<script src="http://img.redimg.cn/js/highcharts/highcharts.js"></script>
+<script type="text/javascript">
+
+	var alldata = [];
+	$.getJSON('/getbandwidthdata',{},function(ret){
+		data = ret;
+		
+		for(var i=0;i<288;i++){
+			var sum = 0;
+			for ( d in data.data){
+				sum += change(data.data[d].china[i]);
+			}
+			alldata.push(fix2(sum));
+			sum = 0;
+		}
+
+	
+
+    $('#container').highcharts({
+        chart: {
+            backgroundColor: '#000',
+            type: 'line'
+        },
+        colors: ['#ccc','#002fa7', '#0c0','#c00'],
+        title: {
+            text: 'Qiniu CDN Monitor',
+            style: {color:'#fff'},
+            x: 0 //center
+        },
+        credits:{
+            enabled:false
+        },
+        labels:{
+            items:{style: {color:'#fff'}}
+        },
+        xAxis: {
+            lineColor:'#369',
+            tickLength:0,
+            categories: timeserial()
+        },
+        yAxis: {
+            title: {
+                text: 'BandWidth (Mb)',
+                style: {'color':'#ccc'},
+            },
+            gridLineColor: '#369',
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#00c'
+            }]
+        },
+        tooltip: {
+            //backgroundColor: 'rgba(255,255,255,0.7)',
+            valueSuffix: 'Mb',
+            borderWidth: 0
+        },
+        legend: {
+            //layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'bottom',
+            itemStyle: {'color':'#ccc'},
+            itemHoverStyle: {color: '#fff'},
+            borderWidth: 0
+        },
+
+        plotOptions: {
+            series: {
+                lineWidth: 4
+            }
+        },
+
+        series: [
+		{
+            name: 'total',
+            data: alldata
+        }
+		]
+    });	
+	
+	
+	
+	
+	});
+	
+
+
+
+
+
+function change(bytes){
+	return parseFloat((bytes/(1024 * 1024)).toFixed(2));
+}
+
+function fix2(v){
+	return parseFloat(v.toFixed(2));
+}
+
+function timeserial(){
+	var r = [];
+	for(var i=0;i<24;i++){
+		for (var j=0;j<60 ;j=j+5 ){
+			r.push(('0'+i).slice(-2)+':'+('0'+j).slice(-2));
+		}
+	}
+	return r;
+}
+
+
+</script>
+</body>
+</html>

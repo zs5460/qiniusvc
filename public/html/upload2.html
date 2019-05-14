@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>QiniuService</title>
+  <link rel="stylesheet" href="https://img.redimg.cn/kit/bs-4.1.0/aio.css">
+  <link rel="stylesheet" href="http://kindeditor.net/ke4/themes/default/default.css">
+</head>
+
+<body>
+
+  <div class="container">
+  
+    <h1>上传</h1>
+    <input type="text" id="txtimage" value="" /><button id="uploadButton">上传</button>
+  <br>
+  <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" style="max-width:200px;height:auto;">
+  <br>
+  <textarea name="content" id="content" cols="30" rows="10"></textarea>
+  
+  
+  
+  </div>
+
+  <script src="https://img.redimg.cn/kit/bs-4.1.0/aio.js"></script>
+  <script src="http://kindeditor.net/ke4/kindeditor-all-min.js?t=20180211.js"></script>
+  <script>
+
+var options = {
+    width : '800px',
+    height : '400px',
+    urlType : 'domain',
+    uploadJson : '/upload',
+    allowFileManager : false,
+    allowImageUpload : true,
+   
+};
+
+var editor;
+KindEditor.ready(function(K) {
+    editor = KindEditor.create('#content', options);
+
+
+    K('#uploadButton').click(function() {
+        editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+                showRemote : false,
+                imageUrl : K('#txtimage').val(),
+                clickFn : function(url, title, width, height, border, align) {
+                  K('#txtimage').val(url);
+                  K('#preview').attr('src',url);
+                    editor.hideDialog();
+                }
+            });
+        });
+    });
+
+});
+  </script>
+</body>
+
+</html>
