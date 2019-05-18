@@ -1,13 +1,17 @@
-FROM alpine:latest
+#build
+FROM golang AS build
 
-LABEL author zs5460@gmail.com
-LABEL appname qiniuservice 
+WORKDIR /go/src/github.com/zs5460/qiniusvc
 
-WORKDIR /app
+ADD . .
 
-ADD ./qiniusvc ./qiniusvc
-ADD ./public/ ./public/
+RUN CGO_ENABLED=0 GOOS=linux go build .
 
-EXPOSE 80
+CMD ["./qiniusvc"]
 
-ENTRYPOINT [ "./qiniusvc" ]
+#production
+FROM scratch AS prod
+
+COPY --from=build /go/src/github.com/zs5460/qiniusvc/qiniusvc .
+
+CMD ["./qiniusvc"]
