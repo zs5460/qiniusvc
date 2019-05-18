@@ -12,6 +12,8 @@ CMD ["./qiniusvc"]
 #production
 FROM scratch AS prod
 
+COPY --from=build /go/src/github.com/zs5460/qiniusvc/public ./public
+
 COPY --from=build /go/src/github.com/zs5460/qiniusvc/qiniusvc .
 
 CMD ["./qiniusvc"]
