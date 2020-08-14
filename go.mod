@@ -1,6 +1,6 @@
 module github.com/zs5460/qiniusvc
 
-go 1.12
+go 1.15
 
 replace (
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190426145343-a29dc8fdc734
@@ -13,16 +13,16 @@ replace (
 )
 
 require (
-	github.com/baa-middleware/recovery v0.0.0-20160406112813-bc8b76067831
-	github.com/baa-middleware/static v0.0.0-20161010104800-4b3f2e1ef2f0
-	github.com/gorilla/websocket v1.4.0 // indirect
-	github.com/json-iterator/go v1.1.6 // indirect
+	github.com/baa-middleware/recovery v0.0.0-20200227085107-3da4ea0df8b2
+	github.com/baa-middleware/static v0.0.0-20200227085341-c941b03b1006
+	github.com/go-baa/baa v1.2.32 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
-	github.com/qiniu/api.v7 v7.2.5+incompatible
-	github.com/qiniu/x v7.0.8+incompatible // indirect
+	github.com/qiniu/api.v7/v7 v7.5.0
+	github.com/smartystreets/goconvey v1.6.4 // indirect
+	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/timest/env v0.0.0-20180717050204-5fce78d35255
-	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2 // indirect
 	gopkg.in/baa.v1 v1.2.32
-	qiniupkg.com/x v7.0.8+incompatible // indirect
 )
