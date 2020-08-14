@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/go-baa/baa"
 	"github.com/qiniu/api.v7/v7/auth/qbox"
 	"github.com/qiniu/api.v7/v7/cdn"
 	"github.com/qiniu/api.v7/v7/storage"
-	"gopkg.in/baa.v1"
 )
 
 // Result ...

@@ -5,8 +5,8 @@ import (
 
 	"github.com/baa-middleware/recovery"
 	"github.com/baa-middleware/static"
+	"github.com/go-baa/baa"
 	"github.com/timest/env"
-	"gopkg.in/baa.v1"
 )
 
 type config struct {

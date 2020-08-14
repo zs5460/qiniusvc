@@ -1,13 +1,10 @@
-github.com/baa-middleware/recovery v0.0.0-20160406112813-bc8b76067831 h1:nAoUej7/9teCJAb9i/ZnQGOTsKxtWTCWI6MwkQVtsrQ=
-github.com/baa-middleware/recovery v0.0.0-20160406112813-bc8b76067831/go.mod h1:SPnBsjA9Jrtk+Qr1ShHcZAT0q+Kq9qHcAC7U/FLq7d8=
 github.com/baa-middleware/recovery v0.0.0-20200227085107-3da4ea0df8b2 h1:2vFZP5CzJ7tXTmlLWuyFroJFU4fp6a8hNrVM0MSyp20=
 github.com/baa-middleware/recovery v0.0.0-20200227085107-3da4ea0df8b2/go.mod h1:SPnBsjA9Jrtk+Qr1ShHcZAT0q+Kq9qHcAC7U/FLq7d8=
-github.com/baa-middleware/static v0.0.0-20161010104800-4b3f2e1ef2f0 h1:nxxeSd7X020akRRR2BCNCe8X2+8NQNLItL76DH5XGb4=
-github.com/baa-middleware/static v0.0.0-20161010104800-4b3f2e1ef2f0/go.mod h1:8uGz6t8oupyYysLzde/NfxFDQMVWt/andmMPrpYUikA=
 github.com/baa-middleware/static v0.0.0-20200227085341-c941b03b1006 h1:AE+8TGeej+MTwvpBbVSkH0fiWenymr+9hvaOrUXbTqk=
 github.com/baa-middleware/static v0.0.0-20200227085341-c941b03b1006/go.mod h1:8uGz6t8oupyYysLzde/NfxFDQMVWt/andmMPrpYUikA=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-baa/baa v1.2.32 h1:pw6fZ7A9sn+KRb8eiEXgRcTRKD21PgfHze0gbAw/Fxw=
 github.com/go-baa/baa v1.2.32/go.mod h1:8jAOk4OgWjvQ/1L87zeJrS+T3sDOJM/xDB05rgv/sXw=
@@ -21,12 +18,8 @@ github.com/golang/tools v0.0.0-20190430004104-b9fed7929fc1/go.mod h1:RgjU9mgBXZi
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1 h1:EGx4pi6eqNxGaHF6qqu48+N2wcFQ5qg5FXgOdqsJ5d8=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
-github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
-github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
 github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
 github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
-github.com/json-iterator/go v1.1.6 h1:MrUvLMLTMxbqFJ9kzlvat/rYZqZnW3u4wkLzWTaFwKs=
-github.com/json-iterator/go v1.1.6/go.mod h1:+SdeFBvtyEkXs7REEP0seUULqWtbJapLOCVDaaPEHmU=
 github.com/json-iterator/go v1.1.10 h1:Kz6Cvnvv2wGdaG/V8yMvfkmNiXq9Ya2KUv4rouJJr68=
 github.com/json-iterator/go v1.1.10/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/jtolds/gls v4.20.0+incompatible h1:xdiiI2gbIgH/gLH7ADydsJ1uDOEzR8yvV7C0MuV77Wo=
@@ -51,8 +44,6 @@ github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/timest/env v0.0.0-20180717050204-5fce78d35255 h1:dDesTEcEuYIc8RNMm5dWWxamlr7m4x4MhCryWDBVaik=
 github.com/timest/env v0.0.0-20180717050204-5fce78d35255/go.mod h1:PKIuG7CPWS0/fq1dphTqvt0RZm0w4fp4eZxBQDJhJxs=
-gopkg.in/baa.v1 v1.2.32 h1:Ogunc5RjgAkrmd9SYlUh5RxnbuPg4VuXLi0U7ta2W38=
-gopkg.in/baa.v1 v1.2.32/go.mod h1:aumtvV4jl+vwW6KUQ0i+dGEfr6j4w0VfN8D48OrZ8eE=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c h1:dUUwHk2QECo/6vqA44rthZ8ie2QXMNeKRTHCNY2nXvo=

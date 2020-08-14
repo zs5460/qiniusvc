@@ -15,7 +15,7 @@ replace (
 require (
 	github.com/baa-middleware/recovery v0.0.0-20200227085107-3da4ea0df8b2
 	github.com/baa-middleware/static v0.0.0-20200227085341-c941b03b1006
-	github.com/go-baa/baa v1.2.32 // indirect
+	github.com/go-baa/baa v1.2.32
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -24,5 +24,4 @@ require (
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/timest/env v0.0.0-20180717050204-5fce78d35255
-	gopkg.in/baa.v1 v1.2.32
 )
